@@ -12,7 +12,7 @@ skapa ett program som ritar ut något och som du kan påverka på något sätt m
 Jag ska göra en skiss.
 
 Jag ska göra typ ett spel.
-Det ska finnas två rektanglar och en ska man kunna styra och man ska försöka få dem och krocka i varandra.
+Det ska finnas två rektanglar och en ska man kunna styra och man ska försöka få dem och krocka i varandra. 
 
 
 
