@@ -9,11 +9,13 @@ public class Frame extends JFrame{
     Graphics graphics;
     Box Spelare;
     Box Fiende;
+    Box Fiende2;
     boolean gameOver;
 
     Frame(){
         Spelare = new Box(100,300,50,50,Color.blue);
         Fiende = new Box(400,300,50,50,Color.red);
+        Fiende2 = new Box(250,300,50,50,Color.BLACK);
         gameOver = false;
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,18 +31,28 @@ public class Frame extends JFrame{
 
         Spelare.draw(g);
         Fiende.draw(g);
+        Fiende2.draw(g);
+
 
         if(gameOver) {
             g.setColor(Color.RED);
             g.setFont(new Font("MV Boli",Font.PLAIN,45));
             g.drawString("DU VAN!", 150, 100);
         }
+        // update
+        Fiende2.y += 25;
+
     }
 
     public void checkCollision() {
         if(Spelare.intersects(Fiende)) {
             gameOver = true;
             System.out.println("DU VAN!");
+            if(Spelare.intersects(Fiende2)) {
+                gameOver = true;
+                System.out.println("DU DOG!");
+            }
+
         }
     }
 
