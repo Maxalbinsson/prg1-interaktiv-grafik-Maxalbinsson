@@ -12,6 +12,7 @@ public class Frame extends JFrame{
     Box Fiende2;
     boolean gameOver;
 
+
     Frame(){
         Spelare = new Box(100,300,50,50,Color.blue);
         Fiende = new Box(400,300,50,50,Color.red);
@@ -33,6 +34,9 @@ public class Frame extends JFrame{
         Fiende.draw(g);
         Fiende2.draw(g);
 
+        if (Fiende2) {
+            y.Height =
+        }
 
         if(gameOver) {
             g.setColor(Color.RED);
